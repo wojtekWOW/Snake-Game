@@ -156,8 +156,8 @@ void Logic()
     //}
 
     //Allow the snake to go trough the walls
-    if (headX < 0) headX = width - 1; if (headX > width) headX = 0;
-    if (headY < 0) headY = height - 1; if (headY > height) headY = 0;
+    if (headX < 0) headX = width - 2; if (headX > width-2) headX = 0;
+    if (headY < 0) headY = height - 1; if (headY > height-1) headY = 0;
 
     //Kill the snake in case of collision with the tail
     for (int i = 0; i < tailLength; i++)
@@ -182,7 +182,7 @@ int main()
         Draw();
         Input();
         Logic();
-        Sleep(100);
+        Sleep(300);
     }
     return 0;    
 }
